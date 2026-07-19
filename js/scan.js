@@ -40,6 +40,11 @@ resiInput.addEventListener('keydown', async (e) => {
   const resi = resiInput.value.trim();
   resiInput.value = '';
 
+  if (!resi) return;
+  processResi(resi);
+});
+
+async function processResi(resi) {
   if (!resi || isProcessing) return;
 
   isProcessing = true;
@@ -55,7 +60,7 @@ resiInput.addEventListener('keydown', async (e) => {
     isProcessing = false;
     focusInput();
   }
-});
+}
 
 function setIdleProcessing() {
   statusBox.className = 'status-box status-idle';

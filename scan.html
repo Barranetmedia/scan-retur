@@ -19,6 +19,12 @@
     <div class="scan-box">
       <label for="resiInput">SCAN RESI</label>
       <input type="text" id="resiInput" autocomplete="off" autofocus>
+      <button id="btnCamera" class="btn-camera">📷 Scan pakai Kamera</button>
+    </div>
+
+    <div id="cameraBox" class="camera-box" style="display:none;">
+      <div id="cameraReader"></div>
+      <button id="btnCloseCamera" class="btn-close-camera">Tutup Kamera</button>
     </div>
 
     <div id="statusBox" class="status-box status-idle">
@@ -31,8 +37,10 @@
   <audio id="soundDuplicate" src="assets/duplicate.mp3" preload="auto"></audio>
   <audio id="soundError" src="assets/error.mp3" preload="auto"></audio>
 
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
   <script src="js/api.js"></script>
   <script src="js/sound.js"></script>
   <script src="js/scan.js"></script>
+  <script src="js/camera.js"></script>
 </body>
 </html>
