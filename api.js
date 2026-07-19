@@ -4,7 +4,7 @@
  * Ganti API_URL dengan URL Web App hasil Deploy di Apps Script.
  */
 
-const API_URL = 'https://script.google.com/macros/s/GANTI_DENGAN_ID_DEPLOYMENT/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbyTg14nebBOsc6lMFmCJGhi7zVi39C1DlpHP1WXsGKTLquCsDeneScVLz4NmkvUxjm1/exec';
 
 async function apiGet(action) {
   const res = await fetch(`${API_URL}?action=${encodeURIComponent(action)}`);
