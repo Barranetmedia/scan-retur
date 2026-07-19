@@ -3,36 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scan Retur</title>
+<title>Login - Scan Retur</title>
+<!-- File ini adalah entry point (index.html) = halaman LOGIN -->
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="scan-container">
-    <div class="header">
-      <img src="assets/logo.png" alt="Logo" class="logo-small" onerror="this.style.display='none'">
-      <div class="operator-info">
-        Operator: <strong id="operatorName">-</strong>
-        <button id="btnGanti" class="btn-ganti">Ganti</button>
-      </div>
-    </div>
+  <div class="login-container">
+    <img src="assets/logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+    <h1>Scan Retur</h1>
 
-    <div class="scan-box">
-      <label for="resiInput">SCAN RESI</label>
-      <input type="text" id="resiInput" autocomplete="off" autofocus>
-    </div>
+    <label for="operatorSelect">Nama Operator</label>
+    <select id="operatorSelect">
+      <option value="">-- Memuat operator... --</option>
+    </select>
 
-    <div id="statusBox" class="status-box status-idle">
-      <div id="statusTitle" class="status-title">Siap menerima scan</div>
-      <div id="statusDetail" class="status-detail"></div>
-    </div>
+    <button id="btnMasuk">Masuk</button>
+
+    <p id="loginError" class="error-text"></p>
   </div>
 
-  <audio id="soundSuccess" src="assets/success.mp3" preload="auto"></audio>
-  <audio id="soundDuplicate" src="assets/duplicate.mp3" preload="auto"></audio>
-  <audio id="soundError" src="assets/error.mp3" preload="auto"></audio>
-
   <script src="js/api.js"></script>
-  <script src="js/sound.js"></script>
-  <script src="js/scan.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>

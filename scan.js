@@ -10,7 +10,7 @@
 
 const operator = localStorage.getItem('operator');
 if (!operator) {
-  window.location.href = 'login.html';
+  window.location.href = 'index.html';
 }
 
 document.getElementById('operatorName').textContent = operator || '-';
@@ -99,7 +99,7 @@ function showStatus(type, title, detail) {
 
 document.getElementById('btnGanti').addEventListener('click', () => {
   localStorage.removeItem('operator');
-  window.location.href = 'login.html';
+  window.location.href = 'index.html';
 });
 
 focusInput();

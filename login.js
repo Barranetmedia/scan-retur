@@ -9,7 +9,7 @@ const loginError = document.getElementById('loginError');
 // Kalau operator sudah tersimpan, langsung lempar ke halaman scan
 const savedOperator = localStorage.getItem('operator');
 if (savedOperator) {
-  window.location.href = 'index.html';
+  window.location.href = 'scan.html';
 }
 
 async function loadOperators() {
@@ -39,7 +39,7 @@ btnMasuk.addEventListener('click', () => {
     return;
   }
   localStorage.setItem('operator', nama);
-  window.location.href = 'index.html';
+  window.location.href = 'scan.html';
 });
 
 loadOperators();
